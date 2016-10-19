@@ -1,0 +1,10 @@
+version: "2"
+services:
+  web:
+    image: "jekyll/jekyll"
+    volumes:
+      - "./build:/srv/jekyll"
+    extra_hosts:
+      - "blog.ellioseven.com:127.0.0.1"
+    ports:
+      - "4000"
