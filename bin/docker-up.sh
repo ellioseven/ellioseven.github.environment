@@ -11,15 +11,15 @@ function dkr_inspect () {
 }
 
 function dkr_inspect_ip () {
-    dkr_inspect "'{{ .NetworkSettings.Networks.$(dkr_id)_default.IPAddress }}'"
+    dkr_inspect "{{ .NetworkSettings.Networks.$(dkr_id)_default.IPAddress }}"
 }
 
 function dkr_inspect_hosts () {
-    dkr_inspect "'{{range \$conf := .HostConfig.ExtraHosts}}{{(println \$conf)}}{{end}}'"
+    dkr_inspect "{{range \$conf := .HostConfig.ExtraHosts}}{{(println \$conf)}}{{end}}"
 }
 
 function dkr_compose () {
-    docker-compose -p $(dkr_id) -f docker-compose.yml up -d
+    docker-compose -p $(dkr_id) up -d
 }
 
 function host_remove () {
