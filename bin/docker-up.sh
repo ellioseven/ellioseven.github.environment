@@ -42,4 +42,4 @@ function host_manage () {
     done
 }
 
-dkr_compose && host_manage
+dkr_compose
