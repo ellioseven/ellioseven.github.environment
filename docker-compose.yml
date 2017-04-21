@@ -1,7 +1,7 @@
 version: "2"
 services:
   web:
-    command: ["jekyll", "serve"]
+    command: ["jekyll", "serve", "--drafts"]
     image: "jekyll/jekyll"
     volumes:
       - "./build:/srv/jekyll"
