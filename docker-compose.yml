@@ -9,3 +9,7 @@ services:
       - "blog.ellioseven.com:127.0.0.1"
     ports:
       - "4000"
+  node:
+    image: "ellioseven/node:9"
+    volumes:
+      - "./build:/srv"
